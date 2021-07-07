@@ -112,7 +112,7 @@ resource "aws_security_group" "allow_all" {
       most_recent      = true
 #      #name_regex       = "^mavrick"
       owners           = ["010374854454"]
-# }
+ }
 
 
 resource "aws_instance" "web-1" {
