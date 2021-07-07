@@ -108,24 +108,24 @@ resource "aws_security_group" "allow_all" {
     }
 }
 
- data "aws_ami" "my_ami" {
-      most_recent      = true
+ #data "aws_ami" "my_ami" {
+  #    most_recent      = true
 #      #name_regex       = "^mavrick"
-      owners           = ["010374854454"]
- }
+   #   owners           = ["010374854454"]
+ # }
 
 
-resource "aws_instance" "web-1" {
+#resource "aws_instance" "web-1" {
      #ami = var.imagename
      #ami = "ami-0747bdcabd34c712a"
-     ami = "${data.aws_ami.my_ami.id}"
-     availability_zone = "us-east-1a"
-     instance_type = "t2.micro"
-     key_name = "MacKey"
-     subnet_id = "${aws_subnet.subnet1-public.id}"
-     vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
-     associate_public_ip_address = true	
-     tags = {
+ #    ami = "${data.aws_ami.my_ami.id}"
+ #    availability_zone = "us-east-1a"
+ #    instance_type = "t2.micro"
+ #    key_name = "MacKey"
+ #    subnet_id = "${aws_subnet.subnet1-public.id}"
+ #    vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
+ #    associate_public_ip_address = true	
+ #    tags = {
          Name = "Server-1"
          Env = "Dev"
      	 Owner = "Shirish"
