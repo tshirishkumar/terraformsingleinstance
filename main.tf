@@ -130,8 +130,8 @@ resource "aws_security_group" "allow_all" {
          Env = "Dev"
      	 Owner = "Shirish"
 	 CostCenter = "ABCD"
-    }
- }
+  #  }
+ #}
 
 ##output "ami_id" {
 #  value = "${data.aws_ami.my_ami.id}"
