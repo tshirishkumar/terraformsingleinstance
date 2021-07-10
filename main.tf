@@ -15,7 +15,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "shirishterraformbucket"
+    bucket = "devtfstatefile"
     key    = "prod.tfstate"
     region = "us-east-1"
   }
